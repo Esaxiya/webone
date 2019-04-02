@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<input name="name" placeholder="名字" id="name" class="name">
+<select class="form-control select">
+    <option value="a">A</option>
+    <option value="b">B</option>
+    <option value="c">C</option>
+    <option value="d">D</option>
+    <option value="e">E</option>
+</select>
+<button type="button" class="form-control" id="send">按钮</button>
+<script>
+    $(function () {
+        $('#send').click(function () {
+            $.ajax({
+                type: 'POST',
+                url: '/test',
+                data: {
+                    name: $("#name").val(),
+                    method: $(".select").val()
+                },
+                dataType: "json",
+                success: alert(111222333)
+            });
+        });
+    });
+</script>
+</body>
+</html>

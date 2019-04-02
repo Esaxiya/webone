@@ -1,0 +1,30 @@
+
+{% block main %}
+    <div class="center-block table-responsive" style="width: 1000px">
+        <table class="table table-bordered table-condensed text-nowrap">
+            <thead>
+            <tr>
+                <td class=""><a href="">ID</a></td>
+                <td class="">接口名称</td>
+                <td class="">接口方法</td>
+                <td class="">接口路径</td>
+                <td class="">接口参数</td>
+                <td class="">状态</td>
+            </tr>
+            </thead>
+
+            <tbody>
+            {% for user in users %}
+                <tr>
+                    <td class=""><a href="">{{ user.name }}</a></td>
+                    <td class=""><a href="">{{ user.age }}</a></td>
+                    <td class=""><a href="">{{ user.sex }}</a></td>
+                    <td class=""><a href="">{{ user.name }}</a></td>
+                    <td class=""><a href="">{{ user.age }}</a></td>
+                    <td class=""><a href="">{{ user.sex }}</a></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

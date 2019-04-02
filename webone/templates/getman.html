@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+
+
+    <script src="{{ url_for('static',filename='main.js') }}"></script>
+
+{% endblock %}
+
+{% block main %}
+    <div class="container">
+        <form>
+            <div class="input-group input-group-lg">
+                <div class="input-group-btn">
+                    <button id="btn_method" type="button" class="btn btn-default dropdown-toggle"
+                            data-toggle="dropdown">
+                        <span id="txt_method">GET</span> <span class="caret"></span></button>
+                    <ul id="method_menu" class="dropdown-menu" role="menu">
+                        <li><a href="javascript:void(0)" class="method">GET</a></li>
+                        <li><a href="javascript:void(0)" class="method">POST</a></li>
+                        <li><a href="javascript:void(0)" class="method">PUT</a></li>
+                        <li><a href="javascript:void(0)" class="method">PATCH</a></li>
+                        <li><a href="javascript:void(0)" class="method">DELETE</a></li>
+                    </ul>
+                </div>
+                <!-- /btn-group -->
+                <input id="txt_url" type="text" class="form-control" placeholder="https://getman.cn/echo" value="">
+                <span class="input-group-btn">
+                <button id="btn_send" class="btn btn-primary" type="button"><span
+                        class="glyphicon glyphicon-arrow-right"></span></button>
+            </span>
+            </div>
+        </form>
+        <h3>Response</h3>
+    </div>
+    <script>
+
+    </script>
+{% endblock %}
